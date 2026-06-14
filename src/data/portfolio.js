@@ -194,3 +194,108 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/abhishek-hemant-sawant/",
   github: "https://github.com/abhisheksawant52",
 }
+
+export const projects = [
+  {
+    name: "AKS Automation Platform",
+    category: "Cloud Infrastructure · DevOps",
+    icon: "☸️",
+    gradient: "from-blue-500 to-cyan-400",
+    description:
+      "End-to-end tooling for provisioning and managing Azure Kubernetes Service (AKS) clusters. Combines Terraform IaC, a Python CLI for day-two operations, GitHub Actions CI/CD, and production-ready Kubernetes manifests with HPA.",
+    stack: ["Terraform", "Python", "Azure AKS", "GitHub Actions", "kubectl", "Kubernetes"],
+    highlights: [
+      "Terraform provisions AKS with autoscaling, availability zones, and Azure Monitor integration",
+      "Python CLI (Click) supports create, delete, scale, get-credentials, list-clusters",
+      "GitHub Actions pipeline: plan-on-PR, apply-on-merge, manual destroy workflow",
+      "Nginx sample app with HPA, rolling update strategy, and LoadBalancer service",
+    ],
+    github: "https://github.com/abhisheksawant52/aks-automation",
+    live: null,
+  },
+  {
+    name: "GenAI RAG Documentation Assistant",
+    category: "AIOps · Generative AI",
+    icon: "🤖",
+    gradient: "from-accent-pink to-accent-maroon",
+    description:
+      "LLM-powered self-service documentation assistant using Retrieval-Augmented Generation (RAG). Ingests internal runbooks and SOPs into a vector database, enabling natural language Q&A for DevOps teams.",
+    stack: ["Azure OpenAI", "LangChain", "Python", "Vector DB", "FastAPI", "Docker"],
+    highlights: [
+      "RAG pipeline with chunking, embedding, and semantic retrieval from enterprise docs",
+      "Azure OpenAI GPT-4 backend with prompt engineering for DevOps context",
+      "REST API via FastAPI — integrates with Slack and Teams bots",
+      "Reduced on-call escalation time by enabling instant runbook Q&A",
+    ],
+    github: null,
+    live: null,
+  },
+  {
+    name: "MLOps CI/CD Pipeline",
+    category: "MLOps · LLMOps",
+    icon: "⚙️",
+    gradient: "from-purple-500 to-pink-500",
+    description:
+      "Enterprise MLOps pipeline for model training, versioning, deployment, and drift monitoring. Integrated with Azure DevOps and ArgoCD for fully automated model lifecycle management.",
+    stack: ["Azure DevOps", "ArgoCD", "MLflow", "Kubernetes", "Python", "Terraform"],
+    highlights: [
+      "Automated model training, evaluation, and registration via CI/CD",
+      "Blue/green and canary deployment strategies for zero-downtime model rollouts",
+      "Data drift and model performance monitoring with alerting",
+      "GitOps-driven model promotion across dev → staging → production",
+    ],
+    github: null,
+    live: null,
+  },
+  {
+    name: "Multi-Cloud Infrastructure as Code",
+    category: "IaC · Cloud Architecture",
+    icon: "☁️",
+    gradient: "from-green-500 to-teal-400",
+    description:
+      "Reusable Terraform modules for AWS, Azure, and GCP covering networking, compute, storage, and security. Implements Well-Architected Framework best practices with FinOps cost tagging.",
+    stack: ["Terraform", "AWS", "Azure", "GCP", "Ansible", "HashiCorp Vault"],
+    highlights: [
+      "Modular Terraform library covering 30+ resource types across 3 cloud providers",
+      "HashiCorp Vault integration for secrets management and dynamic credentials",
+      "Automated compliance scanning with Checkov and tfsec in CI/CD",
+      "FinOps tagging strategy with cost allocation and budget alerts",
+    ],
+    github: null,
+    live: null,
+  },
+  {
+    name: "AIOps Observability Platform",
+    category: "AIOps · SRE",
+    icon: "📊",
+    gradient: "from-orange-500 to-yellow-400",
+    description:
+      "AI-driven observability platform integrating Prometheus, Grafana, ELK, and ML-based anomaly detection. Implements SRE practices with error budgets, SLO tracking, and chaos engineering.",
+    stack: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "Python", "Kubernetes"],
+    highlights: [
+      "ML-based anomaly detection reducing false positive alerts by 60%",
+      "SLO/SLA dashboards with error budget burn rate alerting",
+      "Chaos engineering experiments using Chaos Monkey and Litmus",
+      "Unified observability across 500+ microservices for Fortune 500 client",
+    ],
+    github: null,
+    live: null,
+  },
+  {
+    name: "DevSecOps Pipeline Framework",
+    category: "DevSecOps · Security",
+    icon: "🛡️",
+    gradient: "from-red-500 to-pink-500",
+    description:
+      "Enterprise DevSecOps framework embedding security gates into CI/CD pipelines. Automates SAST, DAST, container scanning, and compliance-as-code across multi-cloud environments.",
+    stack: ["Jenkins", "GitHub Actions", "HashiCorp Vault", "Checkov", "SonarQube", "Trivy"],
+    highlights: [
+      "Automated SAST/DAST scanning integrated as mandatory pipeline gates",
+      "Container image scanning with Trivy — blocks CVE deployments to production",
+      "Compliance-as-code for CIS benchmarks, SOC2, and ISO 27001 controls",
+      "Zero-trust secrets management via HashiCorp Vault dynamic credentials",
+    ],
+    github: null,
+    live: null,
+  },
+]
