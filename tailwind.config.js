@@ -20,9 +20,10 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Space Grotesk', 'sans-serif'],
+        sans:    ['Inter', 'Space Grotesk', 'sans-serif'],
         display: ['Syne', 'sans-serif'],
         heading: ['Syne', 'sans-serif'],
+        mono:    ['JetBrains Mono', 'monospace'],
       },
     },
   },
