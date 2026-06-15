@@ -1,12 +1,12 @@
 export const hero = {
   name: "Abhishek Sawant",
-  title: "Enterprise DevOps and Cloud Solution Architect",
-  subtitle: "AIOps | GenAI | MLOps | RAG",
-  tagline: "10+ years designing, implementing, and optimizing cloud-native platforms",
+  title: "AI Platform Lead & Enterprise Architect",
+  subtitle: "GenAI · LLM Infrastructure · Agentic AI · RAG · MLOps · Kubernetes",
+  tagline: "Open to Global Onsite Opportunities",
 }
 
 export const about = {
-  summary: "Enterprise DevOps and Cloud Solution Architect with 10+ years of experience designing, implementing, and optimizing IaaS/PaaS solutions across AWS, Azure, GCP, VMware, and hybrid cloud environments. Proven expertise in AIOps, Generative AI (GenAI), Retrieval-Augmented Generation (RAG), and MLOps pipeline design, integrating AI-driven automation and LLM-based workflows into enterprise DevOps platforms. Skilled in Kubernetes, CI/CD pipelines, Infrastructure as Code, and DevSecOps practices. Experienced in FinOps cost optimization, SRE, chaos engineering, platform engineering, and GitOps. Collaborates with enterprise architects and product owners to align DevOps strategy with business objectives while mentoring global delivery teams.",
+  summary: "AI Platform Lead & Enterprise Architect with 12+ years of experience building GenAI, LLM Infrastructure, and Agentic AI platforms at enterprise scale. Deep expertise in RAG pipelines, MLOps, LLMOps, and Agentic Workflows across AWS, Azure, and GCP. Proven track record designing Kubernetes-native AI platforms, integrating LLM-powered self-service tooling, and driving DevSecOps transformation for Fortune 500 clients across 4 countries. Open to Global Onsite Opportunities.",
   expertise: [
     {
       icon: "🤖",

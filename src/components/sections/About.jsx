@@ -39,8 +39,11 @@ const cardItem = {
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-background relative overflow-hidden">
+      {/* Background orbs */}
+      <div className="bg-orb w-96 h-96 opacity-30" style={{ background: 'rgba(233,30,140,0.08)', top: '10%', left: '-10%' }} />
+      <div className="bg-orb w-80 h-80 opacity-20" style={{ background: 'rgba(139,26,74,0.1)', bottom: '10%', right: '-8%', animationDelay: '4s' }} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section heading */}
         <motion.div
@@ -156,7 +159,7 @@ export default function About() {
           <p className="text-text-muted text-sm">Core areas of expertise across my 10+ year career</p>
         </motion.div>
 
-        <motion.div
+      <motion.div
           variants={cardVariants}
           initial="hidden"
           whileInView="visible"
@@ -167,10 +170,13 @@ export default function About() {
             <motion.div
               key={item.title}
               variants={cardItem}
-              whileHover={{ y: -6, boxShadow: '0 0 30px rgba(233,30,140,0.18)' }}
-              className="group p-6 bg-surface rounded-2xl border border-surface-2 hover:border-accent-pink/50 transition-all cursor-default"
+              whileHover={{ y: -8, boxShadow: '0 0 40px rgba(233,30,140,0.2), 0 0 80px rgba(233,30,140,0.05)' }}
+              className="group p-6 bg-surface rounded-2xl border border-surface-2 hover:border-accent-pink/50 transition-all cursor-default relative overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-xl bg-accent-pink/10 border border-accent-pink/20 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+              {/* top accent line */}
+              <div className="absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity"
+                style={{ background: 'linear-gradient(90deg, transparent, #e91e8c, transparent)' }} />
+              <div className="w-12 h-12 rounded-xl bg-accent-pink/10 border border-accent-pink/20 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-accent-pink/15 transition-all">
                 {item.icon}
               </div>
               <h4 className="font-heading text-text-primary font-bold text-base mb-2">{item.title}</h4>

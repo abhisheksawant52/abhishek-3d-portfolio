@@ -135,11 +135,12 @@ function DownloadIcon() {
 }
 
 const roles = [
-  'Enterprise DevOps Architect',
-  'Cloud Solution Architect',
-  'AIOps & GenAI Engineer',
-  'MLOps Platform Builder',
-  'DevSecOps Specialist',
+  'AI Platform Lead',
+  'Enterprise Architect',
+  'GenAI & LLM Infrastructure Architect',
+  'Agentic AI · RAG · MLOps',
+  'AWS · Azure · GCP · Kubernetes',
+  'Open to Global Onsite',
 ]
 
 const stats = [
@@ -224,10 +225,11 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
               className="text-text-muted text-base leading-relaxed mb-8 max-w-lg"
             >
-              Enterprise DevOps & Cloud Solution Architect with{' '}
-              <strong className="text-text-secondary">10+ years</strong> of experience designing
-              AI-powered platforms, cloud infrastructure, and CI/CD pipelines for{' '}
-              <strong className="text-text-secondary">Fortune 500 companies</strong> across 4 countries.
+              AI Platform Lead & Enterprise Architect with{' '}
+              <strong className="text-text-secondary">12+ years</strong> building GenAI, LLM Infrastructure
+              &amp; Agentic AI platforms for{' '}
+              <strong className="text-text-secondary">Fortune 500 companies</strong> across AWS · Azure · GCP · Kubernetes.{' '}
+              <strong className="text-accent-pink">Open to Global Onsite Opportunities.</strong>
             </motion.p>
 
             {/* CTA buttons */}
@@ -304,22 +306,35 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.3, type: 'spring', bounce: 0.2 }}
             className="hidden lg:flex justify-center items-center relative"
+            style={{ minHeight: '420px' }}
           >
-            {/* Outer ring */}
-            <div className="absolute w-80 h-80 rounded-full border border-accent-pink/10"
-              style={{ animation: 'float 8s ease-in-out infinite' }} />
-            <div className="absolute w-64 h-64 rounded-full border border-accent-pink/15"
-              style={{ animation: 'float 6s ease-in-out 1s infinite' }} />
+            {/* Outer rotating gradient ring */}
+            <div className="absolute w-96 h-96 rounded-full photo-ring"
+              style={{
+                background: 'conic-gradient(from 0deg, transparent 0deg, rgba(233,30,140,0.4) 60deg, transparent 120deg, rgba(139,26,74,0.3) 200deg, transparent 260deg)',
+                padding: '1px',
+              }}
+            >
+              <div className="w-full h-full rounded-full" style={{ background: '#050505' }} />
+            </div>
 
-            {/* Glow */}
+            {/* Inner counter-rotating ring */}
+            <div className="absolute w-80 h-80 rounded-full photo-ring-rev"
+              style={{
+                background: 'conic-gradient(from 180deg, transparent 0deg, rgba(168,85,247,0.3) 80deg, transparent 160deg, rgba(233,30,140,0.2) 240deg, transparent 300deg)',
+              }}
+            />
+
+            {/* Radial glow */}
             <div className="absolute w-72 h-72 rounded-full"
-              style={{ background: 'radial-gradient(circle, rgba(233,30,140,0.18) 0%, transparent 70%)' }} />
+              style={{ background: 'radial-gradient(circle, rgba(233,30,140,0.2) 0%, rgba(139,26,74,0.1) 40%, transparent 70%)' }} />
 
             {/* Photo frame */}
             <div
-              className="relative w-64 h-64 rounded-full overflow-hidden border-2 border-accent-pink/40"
+              className="relative w-64 h-64 rounded-full overflow-hidden z-10"
               style={{
-                boxShadow: '0 0 50px rgba(233,30,140,0.25), inset 0 0 30px rgba(233,30,140,0.05)',
+                border: '2px solid rgba(233,30,140,0.5)',
+                boxShadow: '0 0 60px rgba(233,30,140,0.3), 0 0 120px rgba(233,30,140,0.1), inset 0 0 40px rgba(233,30,140,0.05)',
                 animation: 'float 5s ease-in-out infinite',
               }}
             >
@@ -329,20 +344,20 @@ export default function Hero() {
                 className="w-full h-full object-cover object-top"
                 onError={e => {
                   e.currentTarget.parentElement.innerHTML =
-                    '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a0a1a,#0a0a1a);font-family:Syne,sans-serif;font-size:4rem;font-weight:800;color:#e91e8c;letter-spacing:-2px">AS</div>'
+                    '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a0a1a,#0a0a0a);font-family:Syne,sans-serif;font-size:4rem;font-weight:800;color:#e91e8c;letter-spacing:-2px">AS</div>'
                 }}
               />
             </div>
 
             {/* Floating tech pills */}
             {[
-              { label: 'Kubernetes', color: '#326ce5', top: '4%',   left: '2%' },
-              { label: 'Terraform',  color: '#7b42bc', top: '12%',  right: '-2%' },
-              { label: 'AIOps',      color: '#7c3aed', bottom: '22%', left: '-6%' },
-              { label: 'AWS',        color: '#ff9900', bottom: '8%', right: '2%' },
-              { label: 'GenAI',      color: '#ec4899', top: '52%',  left: '-10%' },
-              { label: 'ArgoCD',     color: '#ef7b4d', top: '42%',  right: '-8%' },
-              { label: 'LangChain',  color: '#10b981', top: '28%',  left: '-4%' },
+              { label: 'Agentic AI',  color: '#a855f7', top: '4%',    left: '2%' },
+              { label: 'RAG',         color: '#ec4899', top: '12%',   right: '-2%' },
+              { label: 'LLMOps',      color: '#7c3aed', bottom: '22%', left: '-6%' },
+              { label: 'AWS',         color: '#ff9900', bottom: '8%', right: '2%' },
+              { label: 'GenAI',       color: '#10b981', top: '52%',   left: '-10%' },
+              { label: 'Kubernetes',  color: '#326ce5', top: '42%',   right: '-8%' },
+              { label: 'MLOps',       color: '#f97316', top: '28%',   left: '-4%' },
             ].map((p, i) => (
               <motion.div
                 key={p.label}

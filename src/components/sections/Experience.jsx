@@ -129,8 +129,10 @@ export default function Experience() {
   const scaleY = useTransform(scrollYProgress, [0.1, 0.9], [0, 1])
 
   return (
-    <section id="experience" ref={sectionRef} className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" ref={sectionRef} className="py-24 bg-background relative overflow-hidden">
+      {/* Background orbs */}
+      <div className="bg-orb w-[500px] h-[500px] opacity-10" style={{ background: 'rgba(233,30,140,0.12)', top: '20%', right: '-15%' }} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Heading */}
         <motion.div
