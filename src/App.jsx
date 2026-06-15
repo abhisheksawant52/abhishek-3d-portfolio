@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import Navbar        from './components/layout/Navbar'
 import Footer        from './components/layout/Footer'
 import Hero          from './components/sections/Hero'
+import TechMarquee   from './components/sections/TechMarquee'
 import About         from './components/sections/About'
 import TechStack     from './components/sections/TechStack'
 import Projects      from './components/sections/Projects'
@@ -33,6 +34,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <TechMarquee />
         <About />
         <TechStack />
         <Projects />
