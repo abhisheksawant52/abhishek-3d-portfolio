@@ -41,7 +41,7 @@ export const about = {
   ],
   stats: [
     { value: "12+", label: "Years Experience" },
-    { value: "5", label: "Certifications" },
+    { value: "6", label: "Certifications" },
     { value: "4", label: "Countries" },
   ],
   education: [
@@ -178,6 +178,7 @@ export const certifications = [
   { name: "Microsoft Azure 900 and 104 Associate", year: "2019", issuer: "Microsoft" },
   { name: "VMware VCP Certified", year: "2018", issuer: "VMware" },
   { name: "AWS Practitioner", year: "2021", issuer: "AWS" },
+  { name: "AWS Developer Associate", year: "2024", issuer: "AWS" },
   { name: "VMware Cloud Foundation 9.0 Architect", year: "2025", issuer: "VMware" },
   { name: "Harness Certified CD & GitOps Developer", year: "2025", issuer: "Harness INC" },
 ]

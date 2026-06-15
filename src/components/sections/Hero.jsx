@@ -144,7 +144,7 @@ const roles = [
 
 const stats = [
   { val: '12+', lbl: 'Years Experience' },
-  { val: '5',   lbl: 'Certifications' },
+  { val: '6',   lbl: 'Certifications' },
   { val: '4',   lbl: 'Countries' },
   { val: '500+', lbl: 'Fortune Clients' },
 ]
