@@ -103,24 +103,23 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-surface">
+    <section id="contact" className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Section heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10"
         >
-          <p className="text-accent-pink text-sm font-semibold tracking-widest uppercase mb-2">Get In Touch</p>
-          <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-text-primary mb-4">
+          <p className="text-accent-pink text-xs font-semibold tracking-widest uppercase mb-1">Get In Touch</p>
+          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-text-primary mb-3">
             Let&apos;s Work Together
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-accent-pink to-accent-maroon mx-auto rounded-full mb-4" />
+          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
           <p className="text-text-muted text-sm max-w-md mx-auto">
-            Open to senior engineering roles, consulting engagements, and strategic collaborations across DevSecOps, SRE, and Cloud Architecture.
+            Open to senior roles, consulting, and strategic collaborations across GenAI, DevSecOps &amp; Cloud Architecture.
           </p>
         </motion.div>
 

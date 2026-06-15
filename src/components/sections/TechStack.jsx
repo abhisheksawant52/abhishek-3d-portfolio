@@ -214,39 +214,40 @@ export default function TechStack() {
   const shown = active === 'All' ? CATEGORIES : CATEGORIES.filter(c => c.name === active)
 
   return (
-    <section id="skills" className="py-24 bg-surface">
+    <section id="skills" className="py-16 bg-surface">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <h2 className="font-heading text-4xl font-extrabold text-text-primary mb-3">
+          <p className="text-accent-pink text-xs font-semibold tracking-widest uppercase mb-1">Arsenal</p>
+          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-text-primary mb-3">
             Tech Stack
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-accent-maroon mx-auto rounded-full mb-4" />
+          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
           <p className="text-text-muted max-w-xl mx-auto text-sm">
             Technologies I use to architect, build, and operate enterprise-grade platforms.
           </p>
         </motion.div>
 
         {/* Category tabs */}
-        <div className="flex flex-wrap gap-2 justify-center mb-10">
+        <div className="flex flex-wrap gap-2 justify-center mb-8">
           {tabs.map(t => (
             <button
               key={t}
               onClick={() => setActive(t)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
+              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
                 active === t
-                  ? 'bg-accent-pink text-white shadow-lg shadow-accent-pink/25'
+                  ? 'bg-gradient-to-r from-accent-pink to-violet-600 text-white shadow-lg shadow-accent-pink/20'
                   : 'border border-surface-2 text-text-muted hover:border-accent-pink/50 hover:text-text-secondary'
               }`}
             >
-              {t === 'All' ? 'All Technologies' : t}
+              {t === 'All' ? 'All' : t}
             </button>
           ))}
         </div>
@@ -255,60 +256,51 @@ export default function TechStack() {
         {shown.map((cat, ci) => (
           <motion.div
             key={cat.name}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: ci * 0.05 }}
-            className="mb-10"
+            transition={{ duration: 0.4, delay: ci * 0.04 }}
+            className="mb-7"
           >
-            <h3 className="font-heading text-text-secondary font-semibold text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
-              <span className="w-4 h-px bg-accent-pink/50" />
+            <h3 className="font-heading text-text-muted font-semibold text-xs uppercase tracking-widest mb-3 flex items-center gap-2">
+              <span className="w-4 h-px bg-gradient-to-r from-accent-pink to-violet-500" />
               {cat.name}
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {cat.items.map((tech, ti) => {
                 const LogoComp = LOGOS[tech.logo]
                 const lv = LEVEL_COLOR[tech.level] || LEVEL_COLOR.Intermediate
                 return (
                   <motion.div
                     key={tech.name}
-                    initial={{ opacity: 0, y: 16 }}
+                    initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: ti * 0.06 }}
-                    whileHover={{ y: -3, boxShadow: `0 8px 24px rgba(233,30,140,0.12)` }}
-                    className="p-4 bg-background rounded-xl border border-surface-2 hover:border-accent-pink/30 transition-all cursor-default"
+                    transition={{ duration: 0.35, delay: ti * 0.05 }}
+                    whileHover={{ y: -3, boxShadow: `0 6px 20px rgba(139,92,246,0.15)` }}
+                    className="p-3.5 bg-background rounded-xl border border-surface-2 hover:border-violet-500/30 transition-all cursor-default"
                   >
-                    {/* Logo + level */}
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="flex items-center justify-center w-12 h-10">
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="flex items-center justify-center w-10 h-8">
                         {LogoComp ? <LogoComp /> : (
-                          <span className="text-2xl font-bold text-accent-pink">{tech.name[0]}</span>
+                          <span className="text-xl font-bold text-accent-pink">{tech.name[0]}</span>
                         )}
                       </div>
-                      <span
-                        className="px-2 py-0.5 rounded-full text-[10px] font-semibold"
-                        style={{ background: lv.bg, border: `1px solid ${lv.border}`, color: lv.text }}
-                      >
+                      <span className="px-1.5 py-0.5 rounded-full text-[9px] font-bold"
+                        style={{ background: lv.bg, border: `1px solid ${lv.border}`, color: lv.text }}>
                         {tech.level}
                       </span>
                     </div>
-
-                    {/* Name */}
-                    <p className="font-heading font-semibold text-text-primary text-sm mb-1">{tech.name}</p>
-
-                    {/* Description */}
-                    <p className="text-text-muted text-xs leading-relaxed mb-3">{tech.desc}</p>
-
-                    {/* Proficiency bar */}
-                    <div className="w-full h-1 bg-surface-2 rounded-full overflow-hidden">
+                    <p className="font-heading font-semibold text-text-primary text-xs mb-0.5">{tech.name}</p>
+                    <p className="text-text-muted text-[10px] leading-relaxed mb-2">{tech.desc}</p>
+                    <div className="w-full h-0.5 bg-surface-2 rounded-full overflow-hidden">
                       <motion.div
                         className="h-full rounded-full"
-                        style={{ background: lv.text }}
+                        style={{ background: `linear-gradient(90deg, ${lv.text}, #8b5cf6)` }}
                         initial={{ width: 0 }}
                         whileInView={{ width: lv.width }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        transition={{ duration: 0.7, delay: 0.15 }}
                       />
                     </div>
                   </motion.div>

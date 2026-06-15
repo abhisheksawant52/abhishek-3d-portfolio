@@ -31,23 +31,23 @@ const cardItem = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-surface">
+    <section id="projects" className="py-16 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Section heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-8"
         >
-          <h2 className="font-heading text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-pink to-accent-maroon mb-3">
+          <p className="text-accent-pink text-xs font-semibold tracking-widest uppercase mb-1">Portfolio</p>
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-pink via-violet-400 to-accent-pink mb-3">
             Projects & Work
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-accent-pink to-accent-maroon mx-auto rounded-full mb-4" />
+          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
           <p className="text-text-muted text-sm max-w-xl mx-auto">
-            A selection of enterprise-grade projects built across cloud, DevOps, and AI/ML domains.
+            Enterprise-grade projects across cloud, DevOps, and AI/ML domains.
           </p>
         </motion.div>
 
