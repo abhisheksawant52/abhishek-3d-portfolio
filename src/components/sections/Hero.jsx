@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowDown, Download, Mail } from 'lucide-react'
 import { contact } from '../../data/portfolio'
 
 const stats = [
@@ -9,10 +9,30 @@ const stats = [
 ]
 
 const socialLinks = [
-  { href: contact.linkedin, label: 'LinkedIn', icon: Linkedin },
-  { href: contact.github, label: 'GitHub', icon: Github },
-  { href: `mailto:${contact.email}`, label: 'Email', icon: Mail },
+  { href: contact.linkedin, label: 'LinkedIn' },
+  { href: contact.github, label: 'GitHub' },
+  { href: `mailto:${contact.email}`, label: 'Email' },
 ]
+
+function SocialIcon({ label }) {
+  if (label === 'LinkedIn') {
+    return (
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.554V9h3.565v11.452z" />
+      </svg>
+    )
+  }
+
+  if (label === 'GitHub') {
+    return (
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.08c-3.1.68-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.77 2.25 3.27 2.25.73 0 1.31-.23 1.77-.61.1-.72.39-1.21.71-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.24-5.1 5.52.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9z" />
+      </svg>
+    )
+  }
+
+  return <Mail size={17} />
+}
 
 export default function Hero() {
   return (
@@ -55,7 +75,7 @@ export default function Hero() {
               <Download size={16} /> Resume
             </a>
             <div className="ml-1 flex items-center gap-2">
-              {socialLinks.map(({ href, label, icon: Icon }) => (
+              {socialLinks.map(({ href, label }) => (
                 <a
                   key={label}
                   href={href}
@@ -64,7 +84,7 @@ export default function Hero() {
                   rel={label === 'Email' ? undefined : 'noopener noreferrer'}
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-surface-2 text-text-muted transition duration-200 hover:border-accent-pink/50 hover:text-accent-pink"
                 >
-                  <Icon size={17} />
+                  <SocialIcon label={label} />
                 </a>
               ))}
             </div>
