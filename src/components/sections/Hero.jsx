@@ -34,6 +34,21 @@ function SocialIcon({ label }) {
   return <Mail size={17} />
 }
 
+function FloatingTechBadge({ label, kind, className }) {
+  return (
+    <div aria-hidden="true" className={`hero-float-chip ${className}`}>
+      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-pink/10 text-accent-pink">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+          {kind === 'spark' && <><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z" /><path d="M19 15v4M17 17h4M5 16v3M3.5 17.5h3" /></>}
+          {kind === 'nodes' && <><circle cx="6" cy="12" r="2.5" /><circle cx="18" cy="6" r="2.5" /><circle cx="18" cy="18" r="2.5" /><path d="m8.3 10.8 7.4-3.6M8.3 13.2l7.4 3.6" /></>}
+          {kind === 'cloud' && <path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 8.6 4.7 4.7 0 0 0 7 18z" />}
+        </svg>
+      </span>
+      <span className="text-xs font-semibold text-text-secondary">{label}</span>
+    </div>
+  )
+}
+
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
@@ -106,16 +121,21 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.12, ease: 'easeOut' }}
           className="mx-auto w-full max-w-sm lg:max-w-md"
         >
-          <div className="relative overflow-hidden rounded-2xl border border-surface-2 bg-surface p-2 shadow-card">
-            <img
-              src="/abhishek.jpg"
-              alt="Abhishek Sawant"
-              className="aspect-[4/5] w-full rounded-xl object-cover object-top"
-            />
-            <div className="absolute inset-x-2 bottom-2 rounded-b-xl bg-gradient-to-t from-background/95 via-background/75 to-transparent px-6 pb-6 pt-20">
-              <p className="text-sm font-semibold text-text-primary">Building enterprise AI platforms</p>
-              <p className="mt-1 text-xs text-text-muted">GenAI · Agentic AI · Cloud · Platform Engineering</p>
+          <div className="relative py-5">
+            <div className="profile-float relative overflow-hidden rounded-2xl border border-surface-2 bg-surface p-2 shadow-card">
+              <img
+                src="/abhishek.jpg"
+                alt="Abhishek Sawant"
+                className="aspect-[4/5] w-full rounded-xl object-cover object-top"
+              />
+              <div className="absolute inset-x-2 bottom-2 rounded-b-xl bg-gradient-to-t from-background/95 via-background/75 to-transparent px-6 pb-6 pt-20">
+                <p className="text-sm font-semibold text-text-primary">Building enterprise AI platforms</p>
+                <p className="mt-1 text-xs text-text-muted">GenAI · Agentic AI · Cloud · Platform Engineering</p>
+              </div>
             </div>
+            <FloatingTechBadge label="Agentic AI" kind="spark" className="hero-float-one absolute -left-5 top-16" />
+            <FloatingTechBadge label="MCP" kind="nodes" className="hero-float-two absolute -right-5 top-[42%]" />
+            <FloatingTechBadge label="Cloud platforms" kind="cloud" className="hero-float-three absolute -left-4 bottom-16" />
           </div>
           <p className="mt-4 text-center text-xs text-text-muted">Mumbai, India <span className="mx-1.5 text-accent-pink">·</span> Working across global teams</p>
         </motion.div>
