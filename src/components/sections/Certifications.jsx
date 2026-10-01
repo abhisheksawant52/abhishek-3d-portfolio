@@ -24,7 +24,7 @@ export default function Certifications() {
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-text-primary mb-3">
             Certifications & Awards
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full" />
+          <div className="w-12 h-1 bg-accent-pink mx-auto rounded-full" />
         </motion.div>
 
         {/* Certs + Awards side by side on desktop */}
@@ -34,7 +34,7 @@ export default function Certifications() {
           <div className="lg:col-span-2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {certifications.map((cert, i) => {
-                const c = certColors[cert.issuer] || { border: 'rgba(233,30,140,0.3)', bg: 'rgba(233,30,140,0.05)', text: '#e91e8c', icon: '🏆' }
+                const c = certColors[cert.issuer] || { border: 'rgba(89,213,194,0.3)', bg: 'rgba(89,213,194,0.05)', text: '#59d5c2', icon: '🏆' }
                 return (
                   <motion.div
                     key={cert.name}
@@ -42,7 +42,7 @@ export default function Certifications() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.06 }}
-                    whileHover={{ y: -4, boxShadow: `0 10px 25px ${c.border}` }}
+                    whileHover={{ y: -2, boxShadow: '0 10px 24px rgba(0,0,0,0.2)' }}
                     className="group relative p-4 bg-background rounded-xl border transition-all cursor-default overflow-hidden"
                     style={{ borderColor: c.border }}
                   >
@@ -105,8 +105,8 @@ export default function Certifications() {
               className="p-4 bg-gradient-to-br from-green-950/40 to-surface rounded-xl border border-green-500/20 mt-auto"
             >
               <div className="flex items-center gap-2 mb-1">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-green-400 text-xs font-bold">Current Focus</span>
+                <span className="w-2 h-2 bg-accent-pink rounded-full" />
+                <span className="text-accent-pink text-xs font-bold">Current Focus</span>
               </div>
               <p className="text-text-muted text-xs leading-relaxed">
                 Enterprise AI platforms, agent runtime architecture, MCP, cloud native platforms, and FinOps.

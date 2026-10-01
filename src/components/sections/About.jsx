@@ -41,8 +41,8 @@ export default function About() {
   return (
     <section id="about" className="py-16 bg-background relative overflow-hidden">
       {/* Background orbs */}
-      <div className="bg-orb w-96 h-96 opacity-20" style={{ background: 'rgba(233,30,140,0.08)', top: '5%', left: '-10%' }} />
-      <div className="bg-orb w-80 h-80 opacity-15" style={{ background: 'rgba(139,26,74,0.1)', bottom: '5%', right: '-8%', animationDelay: '4s' }} />
+      <div className="bg-orb w-96 h-96 opacity-20" style={{ background: 'rgba(89,213,194,0.08)', top: '5%', left: '-10%' }} />
+      <div className="bg-orb w-80 h-80 opacity-15" style={{ background: 'rgba(40,125,130,0.1)', bottom: '5%', right: '-8%', animationDelay: '4s' }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section heading */}
@@ -75,7 +75,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              whileHover={{ y: -3, boxShadow: '0 0 20px rgba(233,30,140,0.2)' }}
+              whileHover={{ y: -2, boxShadow: '0 12px 28px rgba(0,0,0,0.2)' }}
               className="p-4 bg-surface rounded-xl border border-surface-2 hover:border-accent-pink/40 text-center transition-all"
             >
               <div className="text-xl mb-1">{['🏆', '👥', '🌍'][i]}</div>
@@ -178,11 +178,11 @@ export default function About() {
             <motion.div
               key={item.title}
               variants={cardItem}
-              whileHover={{ y: -5, boxShadow: '0 0 30px rgba(233,30,140,0.18)' }}
+              whileHover={{ y: -2, boxShadow: '0 12px 28px rgba(0,0,0,0.2)' }}
               className="group p-5 bg-surface rounded-xl border border-surface-2 hover:border-accent-pink/50 transition-all cursor-default relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity"
-                style={{ background: 'linear-gradient(90deg, transparent, #e91e8c, transparent)' }} />
+                style={{ background: 'linear-gradient(90deg, transparent, #59d5c2, transparent)' }} />
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-9 h-9 rounded-lg bg-accent-pink/10 border border-accent-pink/20 flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-accent-pink/15 transition-all flex-shrink-0">
                   {item.icon}

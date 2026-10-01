@@ -16,24 +16,24 @@ function ExperienceCard({ item, isLeft, index }) {
   const [open, setOpen] = useState(false)
   return (
     <motion.div
-      initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`w-full md:w-5/12 ml-6 md:ml-0 ${isLeft ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}
     >
       <motion.div
-        whileHover={{ y: -2, boxShadow: '0 6px 25px rgba(139,92,246,0.15)' }}
+        whileHover={{ y: -2, boxShadow: '0 10px 28px rgba(0,0,0,0.2)' }}
         className={`p-4 rounded-xl border transition-all ${
           item.current
-            ? 'bg-gradient-to-br from-violet-950/40 to-surface border-violet-500/30'
-            : 'bg-surface border-surface-2 hover:border-violet-500/30'
+            ? 'bg-gradient-to-br from-accent-pink/10 to-surface border-accent-pink/30'
+            : 'bg-surface border-surface-2 hover:border-accent-pink/30'
         }`}
       >
         {item.current && (
-          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-violet-500/15 border border-violet-500/30 mb-2">
-            <span className="w-1.5 h-1.5 bg-violet-400 rounded-full animate-pulse" />
-            <span className="text-violet-300 text-[10px] font-semibold tracking-wide">Current Role</span>
+          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-accent-pink/10 border border-accent-pink/25 mb-2">
+            <span className="w-1.5 h-1.5 bg-accent-pink rounded-full" />
+            <span className="text-accent-pink text-[10px] font-semibold tracking-wide">Current Role</span>
           </div>
         )}
         <h3 className="font-heading text-text-primary font-bold text-sm leading-snug mb-1">{item.role}</h3>
@@ -42,7 +42,7 @@ function ExperienceCard({ item, isLeft, index }) {
           <span className="text-text-muted">·</span>
           <span className="text-text-muted">{item.location}</span>
         </div>
-        <p className={`text-xs font-semibold mb-2 ${item.current ? 'text-violet-400' : 'text-text-muted'}`}>
+        <p className={`text-xs font-semibold mb-2 ${item.current ? 'text-accent-pink' : 'text-text-muted'}`}>
           {item.period}
         </p>
         {item.highlights?.length > 0 && (
@@ -87,7 +87,7 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={sectionRef} className="py-16 bg-background relative overflow-hidden">
-      <div className="bg-orb w-96 h-96 opacity-10" style={{ background: 'rgba(139,92,246,0.12)', top: '20%', right: '-15%' }} />
+      <div className="bg-orb w-96 h-96 opacity-10" style={{ background: 'rgba(89,213,194,0.1)', top: '20%', right: '-15%' }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <motion.div
@@ -99,7 +99,7 @@ export default function Experience() {
         >
           <p className="text-accent-pink text-xs font-semibold tracking-widest uppercase mb-1">Career Journey</p>
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-text-primary mb-3">Experience</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
+          <div className="w-12 h-1 bg-accent-pink mx-auto rounded-full mb-3" />
           <p className="text-text-muted text-sm">14+ years across cloud, DevOps, platform engineering, and enterprise AI</p>
         </motion.div>
 
@@ -108,11 +108,10 @@ export default function Experience() {
           <motion.div
             style={{ scaleY, transformOrigin: 'top' }}
             className="hidden md:block absolute left-1/2 -translate-x-1/2 w-px h-full"
-            style2={{ background: 'linear-gradient(to bottom, #e91e8c, #8b5cf6, rgba(139,92,246,0.1))' }}
           >
-            <div className="w-full h-full" style={{ background: 'linear-gradient(to bottom, #e91e8c, #8b5cf6, rgba(139,92,246,0.1))' }} />
+            <div className="w-full h-full bg-gradient-to-b from-accent-pink via-accent-maroon to-transparent" />
           </motion.div>
-          <div className="md:hidden absolute left-3 top-0 w-px h-full bg-gradient-to-b from-accent-pink to-violet-500 opacity-20" />
+          <div className="md:hidden absolute left-3 top-0 w-px h-full bg-accent-pink opacity-20" />
 
           <div className="space-y-6">
             {shown.map((item, index) => {
@@ -122,8 +121,7 @@ export default function Experience() {
                   {/* Desktop dot */}
                   <div className={`hidden md:block absolute left-1/2 top-5 z-10 ${item.current ? 'timeline-dot-current' : ''}`}
                     style={{ transform: 'translateX(-50%)' }}>
-                    <div className={`w-3 h-3 rounded-full border-2 border-background ${item.current ? 'bg-violet-400 shadow-lg shadow-violet-500/50' : 'bg-surface-2 border-accent-pink/50'}`} />
-                    {item.current && <div className="absolute inset-0 rounded-full bg-violet-400/30 animate-ping" />}
+                  <div className={`w-3 h-3 rounded-full border-2 border-background ${item.current ? 'bg-accent-pink' : 'bg-surface-2 border-accent-pink/50'}`} />
                   </div>
                   {/* Mobile dot */}
                   <div className="md:hidden absolute left-3 top-5 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-accent-pink border-2 border-background z-10" />

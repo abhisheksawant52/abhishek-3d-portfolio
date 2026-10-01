@@ -208,7 +208,7 @@ const CATEGORIES = [
 ]
 
 const LEVEL_COLOR = {
-  Expert:      { bg: 'rgba(233,30,140,0.12)', border: 'rgba(233,30,140,0.4)', text: '#e91e8c', width: '100%' },
+  Expert:      { bg: 'rgba(89,213,194,0.12)', border: 'rgba(89,213,194,0.4)', text: '#59d5c2', width: '100%' },
   Advanced:    { bg: 'rgba(249,115,22,0.12)', border: 'rgba(249,115,22,0.4)', text: '#f97316', width: '80%' },
   Experienced: { bg: 'rgba(99,102,241,0.12)', border: 'rgba(99,102,241,0.4)', text: '#818cf8', width: '65%' },
   Skillful:    { bg: 'rgba(16,185,129,0.12)', border: 'rgba(16,185,129,0.4)', text: '#34d399', width: '55%' },
@@ -236,7 +236,7 @@ export default function TechStack() {
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-text-primary mb-3">
             Tech Stack
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
+          <div className="w-12 h-1 bg-accent-pink mx-auto rounded-full mb-3" />
           <p className="text-text-muted max-w-xl mx-auto text-sm">
             Technologies I use to architect, build, and operate enterprise-grade platforms.
           </p>
@@ -250,7 +250,7 @@ export default function TechStack() {
               onClick={() => setActive(t)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
                 active === t
-                  ? 'bg-gradient-to-r from-accent-pink to-violet-600 text-white shadow-lg shadow-accent-pink/20'
+                  ? 'bg-accent-pink text-background shadow-lg shadow-black/20'
                   : 'border border-surface-2 text-text-muted hover:border-accent-pink/50 hover:text-text-secondary'
               }`}
             >
@@ -270,7 +270,7 @@ export default function TechStack() {
             className="mb-7"
           >
             <h3 className="font-heading text-text-muted font-semibold text-xs uppercase tracking-widest mb-3 flex items-center gap-2">
-              <span className="w-4 h-px bg-gradient-to-r from-accent-pink to-violet-500" />
+              <span className="w-4 h-px bg-accent-pink" />
               {cat.name}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -284,8 +284,8 @@ export default function TechStack() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.35, delay: ti * 0.05 }}
-                    whileHover={{ y: -3, boxShadow: `0 6px 20px rgba(139,92,246,0.15)` }}
-                    className="p-3.5 bg-background rounded-xl border border-surface-2 hover:border-violet-500/30 transition-all cursor-default"
+                    whileHover={{ y: -2, boxShadow: '0 10px 24px rgba(0,0,0,0.2)' }}
+                    className="p-3.5 bg-background rounded-xl border border-surface-2 hover:border-accent-pink/40 transition-all cursor-default"
                   >
                     <div className="flex items-start justify-between mb-2">
                       <div className="flex items-center justify-center w-10 h-8">

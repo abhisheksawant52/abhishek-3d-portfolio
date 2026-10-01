@@ -44,10 +44,10 @@ function MarqueeRow({ items, direction = 'left', speed = 35 }) {
     <div className="relative overflow-hidden">
       {/* Left fade */}
       <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: 'linear-gradient(to right, #0a0a0a, transparent)' }} />
+        style={{ background: 'linear-gradient(to right, #0b1220, transparent)' }} />
       {/* Right fade */}
       <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: 'linear-gradient(to left, #0a0a0a, transparent)' }} />
+        style={{ background: 'linear-gradient(to left, #0b1220, transparent)' }} />
 
       <motion.div
         className="flex gap-6 w-max"
@@ -112,11 +112,11 @@ export default function TechMarquee() {
 
       {/* Row 1 — scrolls left */}
       <div className="mb-4">
-        <MarqueeRow items={doubled1} direction="left" speed={40} />
+        <MarqueeRow items={doubled1} direction="left" speed={58} />
       </div>
 
       {/* Row 2 — scrolls right */}
-      <MarqueeRow items={doubled2} direction="right" speed={35} />
+      <MarqueeRow items={doubled2} direction="right" speed={52} />
     </section>
   )
 }

@@ -56,7 +56,7 @@ export default function Personal() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  whileHover={{ y: -4, boxShadow: '0 0 24px rgba(233,30,140,0.15)' }}
+                  whileHover={{ y: -2, boxShadow: '0 10px 24px rgba(0,0,0,0.2)' }}
                   className="group p-5 bg-surface rounded-xl border border-surface-2 hover:border-accent-pink/40 transition-all cursor-default"
                 >
                   <div className="flex items-start gap-4">

@@ -117,7 +117,7 @@ export default function Contact() {
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-text-primary mb-3">
             Let&apos;s Work Together
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
+          <div className="w-12 h-1 bg-accent-pink mx-auto rounded-full mb-3" />
           <p className="text-text-muted text-sm max-w-md mx-auto">
             For conversations about enterprise AI platforms, cloud architecture, and platform engineering, get in touch.
           </p>
@@ -127,8 +127,8 @@ export default function Contact() {
 
           {/* Left — contact info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-2 space-y-5"
@@ -180,8 +180,8 @@ export default function Contact() {
               className="p-4 bg-green-500/5 rounded-xl border border-green-500/20"
             >
               <div className="flex items-center gap-2 mb-1">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-green-400 text-xs font-semibold">Current Focus</span>
+                <span className="w-2 h-2 bg-accent-pink rounded-full" />
+                <span className="text-accent-pink text-xs font-semibold">Current Focus</span>
               </div>
               <p className="text-text-muted text-xs leading-relaxed">
                 GenAI and agentic AI platforms, MCP integrations, cloud native architecture, and platform engineering.
@@ -191,8 +191,8 @@ export default function Contact() {
 
           {/* Right — contact form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-3"

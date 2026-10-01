@@ -54,8 +54,8 @@ export default function Footer() {
               AI Platform Lead and Enterprise Architect building secure foundations for GenAI, agentic AI, and cloud native platforms.
             </p>
             <div className="flex items-center gap-1.5 mt-3">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-green-400 text-xs font-medium">Current role · HCL Technologies</span>
+              <span className="w-2 h-2 bg-accent-pink rounded-full" />
+              <span className="text-accent-pink text-xs font-medium">Current role · HCL Technologies</span>
             </div>
           </div>
 

@@ -25,8 +25,8 @@ const cardVariants = {
 }
 
 const cardItem = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 14 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: 'easeOut' } },
 }
 
 export default function Projects() {
@@ -42,10 +42,10 @@ export default function Projects() {
           className="text-center mb-8"
         >
           <p className="text-accent-pink text-xs font-semibold tracking-widest uppercase mb-1">Portfolio</p>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-pink via-violet-400 to-accent-pink mb-3">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-text-primary mb-3">
             Projects & Work
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
+          <div className="w-12 h-1 bg-accent-pink mx-auto rounded-full mb-3" />
           <p className="text-text-muted text-sm max-w-xl mx-auto">
             Selected cloud and platform engineering work, including projects featured on LinkedIn.
           </p>
@@ -63,7 +63,7 @@ export default function Projects() {
             <motion.div
               key={project.name}
               variants={cardItem}
-              whileHover={{ y: -6, boxShadow: '0 0 28px rgba(233,30,140,0.18)' }}
+              whileHover={{ y: -2, boxShadow: '0 14px 34px rgba(0,0,0,0.24)' }}
               className="group flex flex-col bg-background rounded-2xl border border-surface-2 hover:border-accent-pink/40 transition-all overflow-hidden"
             >
               {/* Card header strip */}
