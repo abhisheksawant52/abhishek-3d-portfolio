@@ -138,16 +138,14 @@ const roles = [
   'AI Platform Lead',
   'Enterprise Architect',
   'GenAI & LLM Infrastructure Architect',
-  'Agentic AI · RAG · MLOps',
-  'AWS · Azure · GCP · Kubernetes',
-  'Open to Global Onsite',
+  'Agentic AI · MCP · LLMOps',
+  'Cloud & Platform Engineering',
 ]
 
 const stats = [
-  { val: '12+', lbl: 'Years Experience' },
-  { val: '6',   lbl: 'Certifications' },
-  { val: '4',   lbl: 'Countries' },
-  { val: '500+', lbl: 'Fortune Clients' },
+  { val: '14+', lbl: 'Years Experience' },
+  { val: '6',   lbl: 'Credentials & Courses' },
+  { val: '27', lbl: 'Engineers Led' },
 ]
 
 const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -174,7 +172,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            {/* Available badge */}
+            {/* Current role badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -182,7 +180,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/8 mb-6"
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-xs font-semibold text-green-400 tracking-wide">Available for Enterprise Projects</span>
+              <span className="text-xs font-semibold text-green-400 tracking-wide">AI Platform Lead · HCL Technologies</span>
             </motion.div>
 
             {/* Greeting */}
@@ -225,11 +223,8 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
               className="text-text-muted text-base leading-relaxed mb-8 max-w-lg"
             >
-              AI Platform Lead & Enterprise Architect with{' '}
-              <strong className="text-text-secondary">12+ years</strong> building GenAI, LLM Infrastructure
-              &amp; Agentic AI platforms for{' '}
-              <strong className="text-text-secondary">Fortune 500 companies</strong> across AWS · Azure · GCP · Kubernetes.{' '}
-              <strong className="text-accent-pink">Open to Global Onsite Opportunities.</strong>
+              AI Platform Lead and Enterprise Architect with{' '}
+              <strong className="text-text-secondary">14+ years of experience</strong> across cloud, platform engineering, DevOps, and AI infrastructure. Currently building secure enterprise foundations for GenAI and agentic AI across AWS, Azure, GCP, and VMware.
             </motion.p>
 
             {/* CTA buttons */}
@@ -357,7 +352,7 @@ export default function Hero() {
               { label: 'AWS',         color: '#ff9900', bottom: '8%', right: '2%' },
               { label: 'GenAI',       color: '#10b981', top: '52%',   left: '-10%' },
               { label: 'Kubernetes',  color: '#326ce5', top: '42%',   right: '-8%' },
-              { label: 'MLOps',       color: '#f97316', top: '28%',   left: '-4%' },
+              { label: 'MCP',         color: '#f97316', top: '28%',   left: '-4%' },
             ].map((p, i) => (
               <motion.div
                 key={p.label}

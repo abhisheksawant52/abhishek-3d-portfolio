@@ -119,7 +119,7 @@ export default function Contact() {
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
           <p className="text-text-muted text-sm max-w-md mx-auto">
-            Open to senior roles, consulting, and strategic collaborations across GenAI, DevSecOps &amp; Cloud Architecture.
+            For conversations about enterprise AI platforms, cloud architecture, and platform engineering, get in touch.
           </p>
         </motion.div>
 
@@ -174,17 +174,17 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Availability note */}
+            {/* Current focus */}
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="p-4 bg-green-500/5 rounded-xl border border-green-500/20"
             >
               <div className="flex items-center gap-2 mb-1">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-green-400 text-xs font-semibold">Currently Available</span>
+                <span className="text-green-400 text-xs font-semibold">Current Focus</span>
               </div>
               <p className="text-text-muted text-xs leading-relaxed">
-                Open to enterprise roles, consulting engagements, and strategic partnerships. Response within 24 hours.
+                GenAI and agentic AI platforms, MCP integrations, cloud native architecture, and platform engineering.
               </p>
             </motion.div>
           </motion.div>

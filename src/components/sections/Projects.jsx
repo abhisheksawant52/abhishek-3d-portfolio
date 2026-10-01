@@ -47,7 +47,7 @@ export default function Projects() {
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
           <p className="text-text-muted text-sm max-w-xl mx-auto">
-            Enterprise-grade projects across cloud, DevOps, and AI/ML domains.
+            Selected cloud and platform engineering work, including projects featured on LinkedIn.
           </p>
         </motion.div>
 

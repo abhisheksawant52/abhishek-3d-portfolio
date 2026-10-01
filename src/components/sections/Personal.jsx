@@ -8,9 +8,9 @@ const hobbies = [
 ]
 
 const languages = [
-  { lang: 'English',  level: 'Professional',  pct: 95 },
-  { lang: 'Hindi',    level: 'Native',        pct: 100 },
-  { lang: 'Marathi',  level: 'Native',        pct: 100 },
+  { lang: 'English' },
+  { lang: 'Hindi' },
+  { lang: 'Marathi' },
 ]
 
 export default function Personal() {
@@ -102,18 +102,7 @@ export default function Personal() {
                       </span>
                       <span className="font-heading font-semibold text-text-primary">{l.lang}</span>
                     </div>
-                    <span className="text-xs font-medium px-2.5 py-0.5 rounded-full border border-accent-pink/30 text-accent-pink bg-accent-pink/5">
-                      {l.level}
-                    </span>
-                  </div>
-                  <div className="w-full h-2 bg-surface-2 rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full rounded-full bg-gradient-to-r from-accent-pink to-accent-maroon"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${l.pct}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: i * 0.2 + 0.3, ease: 'easeOut' }}
-                    />
+                    <span className="text-xs text-text-muted">Language</span>
                   </div>
                 </motion.div>
               ))}
@@ -135,7 +124,7 @@ export default function Personal() {
                 {[
                   { label: 'Location',     value: 'Mumbai, India' },
                   { label: 'Nationality',  value: 'Indian' },
-                  { label: 'Availability', value: 'Open to Enterprise Roles' },
+                  { label: 'Languages', value: 'English, Hindi, Marathi' },
                 ].map(item => (
                   <div key={item.label} className="flex items-center justify-between">
                     <span className="text-text-muted">{item.label}</span>

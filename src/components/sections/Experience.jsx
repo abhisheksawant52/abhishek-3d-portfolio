@@ -100,7 +100,7 @@ export default function Experience() {
           <p className="text-accent-pink text-xs font-semibold tracking-widest uppercase mb-1">Career Journey</p>
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-text-primary mb-3">Experience</h2>
           <div className="w-12 h-1 bg-gradient-to-r from-accent-pink to-violet-500 mx-auto rounded-full mb-3" />
-          <p className="text-text-muted text-sm">12+ years across 4 countries · Fortune 500 clients</p>
+          <p className="text-text-muted text-sm">14+ years across cloud, DevOps, platform engineering, and enterprise AI</p>
         </motion.div>
 
         <div className="relative">

@@ -96,7 +96,7 @@ export default function Certifications() {
               </motion.div>
             ))}
 
-            {/* Open to work card */}
+            {/* Current focus card */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -106,10 +106,10 @@ export default function Certifications() {
             >
               <div className="flex items-center gap-2 mb-1">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-green-400 text-xs font-bold">Open to Global Onsite</span>
+                <span className="text-green-400 text-xs font-bold">Current Focus</span>
               </div>
               <p className="text-text-muted text-xs leading-relaxed">
-                Available for senior roles, consulting & strategic partnerships. Response within 24h.
+                Enterprise AI platforms, agent runtime architecture, MCP, cloud native platforms, and FinOps.
               </p>
             </motion.div>
           </div>

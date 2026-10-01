@@ -66,14 +66,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10"
+          className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10"
         >
-          {[
-            { value: '12+', label: 'Years Experience', icon: '🏆' },
-            { value: '6',   label: 'Certifications',   icon: '📜' },
-            { value: '4',   label: 'Countries Worked', icon: '🌍' },
-            { value: '500+', label: 'Fortune Clients', icon: '🚀' },
-          ].map((stat, i) => (
+          {about.stats.map((stat, i) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 15 }}
@@ -83,7 +78,7 @@ export default function About() {
               whileHover={{ y: -3, boxShadow: '0 0 20px rgba(233,30,140,0.2)' }}
               className="p-4 bg-surface rounded-xl border border-surface-2 hover:border-accent-pink/40 text-center transition-all"
             >
-              <div className="text-xl mb-1">{stat.icon}</div>
+              <div className="text-xl mb-1">{['🏆', '👥', '🌍'][i]}</div>
               <p className="text-2xl font-extrabold font-heading text-accent-pink leading-none">
                 <AnimatedCounter target={stat.value} />
               </p>
@@ -110,7 +105,7 @@ export default function About() {
               {about.summary}
             </p>
             <div className="flex flex-wrap gap-1.5">
-              {['AI Platform Lead', 'Fortune 500', 'GenAI Architect', 'LLMOps', 'RAG', 'Agentic AI', 'FinOps', 'SRE'].map(t => (
+              {['AI Platform Lead', 'Enterprise Architecture', 'Agentic AI', 'MCP', 'GenAI', 'LLMOps', 'Platform Engineering', 'FinOps'].map(t => (
                 <span key={t} className="px-2.5 py-0.5 text-xs font-medium rounded-full border border-accent-pink/30 text-accent-pink bg-accent-pink/5">
                   {t}
                 </span>
@@ -148,7 +143,6 @@ export default function About() {
               <div className="space-y-1.5">
                 {[
                   { label: '📍 Location', value: 'Mumbai, India' },
-                  { label: '🌏 Open to', value: 'Global Onsite' },
                   { label: '🗣 Languages', value: 'English · Hindi · Marathi' },
                   { label: '🎯 Hobbies', value: 'Reading · Photography · Travel · Gaming' },
                 ].map(item => (

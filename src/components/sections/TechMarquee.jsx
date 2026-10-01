@@ -25,7 +25,7 @@ const ROW_2 = [
   { name: 'Elasticsearch', url: 'https://cdn.worldvectorlogo.com/logos/elasticsearch.svg' },
   { name: 'Datadog',       url: 'https://cdn.worldvectorlogo.com/logos/datadog.svg' },
   { name: 'Splunk',        url: 'https://cdn.worldvectorlogo.com/logos/splunk.svg' },
-  { name: 'GitLab',        url: 'https://cdn.worldvectorlogo.com/logos/gitlab.svg' },
+  { name: 'OpenTelemetry', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opentelemetry/opentelemetry-original.svg' },
   { name: 'VMware',        url: 'https://cdn.worldvectorlogo.com/logos/vmware-1.svg' },
   { name: 'GitHub Actions',url: 'https://cdn.jsdelivr.net/npm/simple-icons@v15.18.0/icons/githubactions.svg' },
   { name: 'OpenShift',     url: 'https://cdn.worldvectorlogo.com/logos/red-hat-openshift-1.svg' },
