@@ -34,7 +34,7 @@ export default function Certifications() {
           <div className="lg:col-span-2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {certifications.map((cert, i) => {
-                const c = certColors[cert.issuer] || { border: 'rgba(89,213,194,0.3)', bg: 'rgba(89,213,194,0.05)', text: '#59d5c2', icon: '🏆' }
+                const c = certColors[cert.issuer] || { border: 'rgba(233,30,140,0.3)', bg: 'rgba(233,30,140,0.05)', text: '#e91e8c', icon: '🏆' }
                 return (
                   <motion.div
                     key={cert.name}

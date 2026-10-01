@@ -208,7 +208,7 @@ const CATEGORIES = [
 ]
 
 const LEVEL_COLOR = {
-  Expert:      { bg: 'rgba(89,213,194,0.12)', border: 'rgba(89,213,194,0.4)', text: '#59d5c2', width: '100%' },
+  Expert:      { bg: 'rgba(233,30,140,0.12)', border: 'rgba(233,30,140,0.4)', text: '#e91e8c', width: '100%' },
   Advanced:    { bg: 'rgba(249,115,22,0.12)', border: 'rgba(249,115,22,0.4)', text: '#f97316', width: '80%' },
   Experienced: { bg: 'rgba(99,102,241,0.12)', border: 'rgba(99,102,241,0.4)', text: '#818cf8', width: '65%' },
   Skillful:    { bg: 'rgba(16,185,129,0.12)', border: 'rgba(16,185,129,0.4)', text: '#34d399', width: '55%' },
