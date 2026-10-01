@@ -247,7 +247,7 @@ export default function Hero() {
               </button>
               <a
                 href="/Abhishek_Sawant_Resume.pdf"
-                download
+                download="Abhishek_Sawant_Resume.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-accent-pink/50 text-accent-pink font-semibold rounded-xl text-sm hover:bg-accent-pink/10 hover:scale-[1.03] active:scale-[0.98] transition-all font-heading"
               >
                 <DownloadIcon />

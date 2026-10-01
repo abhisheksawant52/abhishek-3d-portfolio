@@ -95,8 +95,8 @@ export default function Navbar() {
           {/* Desktop: Resume download */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="/AI Architect -Abhishek.pdf"
-              download
+              href="/Abhishek_Sawant_Resume.pdf"
+              download="Abhishek_Sawant_Resume.pdf"
               className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-accent-pink/40 text-accent-pink text-xs font-semibold hover:bg-accent-pink/10 hover:scale-105 transition-all"
             >
               <Download size={13} />
@@ -142,7 +142,7 @@ export default function Navbar() {
               ))}
               <a
                 href="/Abhishek_Sawant_Resume.pdf"
-                download
+                download="Abhishek_Sawant_Resume.pdf"
                 className="mt-2 flex items-center justify-center gap-2 py-2.5 rounded-lg border border-accent-pink/40 text-accent-pink text-sm font-semibold hover:bg-accent-pink/10 transition-all"
               >
                 <Download size={14} />
